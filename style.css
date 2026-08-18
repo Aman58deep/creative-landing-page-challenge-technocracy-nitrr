@@ -1,0 +1,168 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+/* .all {
+  border: 1px solid red;
+} */
+
+#canvas {
+  width: min(100vw, calc(100vh - 200px));
+  height: min(100vw, calc(100vh - 200px));
+  min-width: 500px;
+  min-height: 500px;
+  /* background-color: beige; */
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#canvas canvas {
+  aspect-ratio: 1/1;
+  width: 100% !important;
+  height: 100% !important;
+}
+#header {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  /* background-color: #7ddef4; */
+}
+
+#footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  /* background-color: #ef7d7d; */
+}
+
+#layer {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* internet reff */
+.glass-header {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 40px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 255, 200, 0.2);
+  z-index: 10;
+}
+
+.header-nav {
+  display: flex;
+  gap: 15px;
+}
+
+/* Glass Buttons with Bluish-Green Reflection */
+.glass-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 200, 180, 0.4);
+  box-shadow:
+    0 4px 6px rgba(0, 200, 180, 0.1),
+    inset 0 0 10px rgba(0, 200, 180, 0.05);
+  color: #2c3e50;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.glass-btn:hover {
+  background: rgba(0, 200, 180, 0.1);
+  box-shadow:
+    0 6px 12px rgba(0, 200, 180, 0.25),
+    inset 0 0 15px rgba(0, 200, 180, 0.1);
+  transform: translateY(-2px);
+  border-color: rgba(0, 200, 180, 0.6);
+}
+
+/* foter */
+.mild-footer {
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+  background: #f8f9fa;
+  border-top: 1px solid #eaeaea;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.social-icon {
+  color: #6c757d; /* Inherits the mild gray footer color */
+  transition: all 0.3s ease;
+  display: inline-flex;
+  text-decoration: none;
+}
+
+/* Hover effects for brand colors and a slight lift */
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+.social-icon.facebook:hover {
+  color: #1877f2;
+}
+.social-icon.instagram:hover {
+  color: #e1306c;
+}
+.social-icon.linkedin:hover {
+  color: #0a66c2;
+}
+.social-icon.x-twitter:hover {
+  color: #000000;
+}
+.social-icon.youtube:hover {
+  color: #ff0000;
+}
+
+.footer-quote {
+  font-style: italic;
+  color: #495057;
+}
+
+.icon-placeholder {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
